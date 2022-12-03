@@ -1,0 +1,35 @@
+﻿@using MyProjectAds;
+@model List<Ad>
+
+<h1>My favorite Ads</h1>
+
+<div class="d-flex flex-row flex-wrap">
+    @foreach (Ad item in Model)
+    {
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">
+                    @item.Title
+
+                </div>
+                <p class="card-subtitle">@item.Price</p>
+            </div>
+            <div class="card-body">
+                <img src="@item.ImageUrl" width="100" />
+                <div class="card-text">
+                    <p>published: <em>@item.Published</em></p>
+                    <p>@item.Details</p>
+                    <p>@item.Location</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="@Url.Action("Details", "Page", new {adId = item.Id})" class="btn btn-success">
+                    Details
+                </a>
+                <a style="float:right" href="@Url.Action("RemoveFavoriteAd", "Page", new { adId = item.Id})">
+                    <i class="fa-solid fa-heart-crack"></i>
+                </a>
+            </div>
+        </div>
+    }
+</div>

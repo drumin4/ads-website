@@ -1,0 +1,77 @@
+﻿@using MyProjectAds;
+@model List<Ad>
+<h1>All Ads</h1>
+<a href="@Url.Action("ListByDateDesc", "Page")" class="btn btn-primary">Sort by Latest</a>
+<a href="@Url.Action("ListByPriceAsc", "Page")" class="btn btn-primary">Sort by Price - Low to High</a>
+<a href="@Url.Action("ListByPriceDesc", "Page")" class="btn btn-primary">Sort by Price - High to Low</a>
+
+<form action="@Url.Action("Search")" method="post" class="form-incline mt-2 mb-2">
+    <input type="text" name="criteria" class="col-2"/>
+    <button type="submit" class="btn btn-info col-2">Search</button>
+</form>
+
+<form action="@Url.Action("FilterByPrice")" method="post" class="form-inline mt-2 mb-2">
+    <input type="number" name="fromPrice" class="col-2"/>
+    <input type="number" name="toPrice" class="col-2"/>
+
+    <button type="submit" class="btn btn-success form-command form-command-sm">By Price</button>
+</form>
+
+<div class="d-flex flex-row flex-wrap">
+    @foreach (Ad item in Model) 
+    {
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">
+                    @item.Title
+                </div>
+                <p class="card-subtitle">@item.Price</p>
+            </div>
+            <div class="card-body">
+                <img src="@item.ImageUrl" width="100" />
+                <div class="card-text">
+                    <p>published: <em>@item.Published</em></p>
+                    <p>@item.Details</p>
+                    <p>@item.Location</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="@Url.Action("Details", "Page", new {adId = item.Id})" class="btn btn-success">
+                    Details
+                </a>
+                <a href="@Url.Action("AddToFavorites", "Page", new { id = item.Id})" style="float:right">
+                    <i class="fa-sharp fa-solid fa-heart"></i>
+                </a>
+            </div>
+        </div>    
+    }
+</div>
+
+@*<table class="table table-bordered">
+    <thread>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Date published</th>
+            <th>Location</th>
+            <th>Image</th>
+            <th>Contact</th>
+            <th>Price</th>
+        </tr>
+    </thread>
+    <tbody>
+        @foreach (Ad item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Details</td>
+                <td>@item.Published</td>
+                <td>@item.Location</td>
+                <td>@item.ImageUrl</td>
+                <td>@item.Contact</td>
+                <td>@item.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>*@
+    

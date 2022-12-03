@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProjectAds", "MyProjectAds\MyProjectAds.csproj", "{63C41B52-97B6-4037-A597-C646DFD5C17F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAds", "WebAds\WebAds.csproj", "{77D1C554-6874-4020-BC38-829052B8D0DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAdsTests", "WebAdsTests\WebAdsTests.csproj", "{403917C7-FEC0-4974-93FB-0D0529F6FF23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63C41B52-97B6-4037-A597-C646DFD5C17F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C41B52-97B6-4037-A597-C646DFD5C17F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C41B52-97B6-4037-A597-C646DFD5C17F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C41B52-97B6-4037-A597-C646DFD5C17F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77D1C554-6874-4020-BC38-829052B8D0DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D1C554-6874-4020-BC38-829052B8D0DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D1C554-6874-4020-BC38-829052B8D0DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D1C554-6874-4020-BC38-829052B8D0DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403917C7-FEC0-4974-93FB-0D0529F6FF23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403917C7-FEC0-4974-93FB-0D0529F6FF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403917C7-FEC0-4974-93FB-0D0529F6FF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403917C7-FEC0-4974-93FB-0D0529F6FF23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F2ACAD2E-D5CB-49DA-A3F8-28D071CFBD0F}
+	EndGlobalSection
+EndGlobal

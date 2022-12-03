@@ -1,0 +1,15 @@
+﻿@using MyProjectAds;
+@model Ad
+
+<div>
+    <h2>@Model.Title</h2>
+    <p><em>@Model.Published</em></p>
+    <h3>Price: @Model.Price</h3>
+    <p>@Model.Location</p>
+    <p>@Model.Details</p>
+
+    <p class="text-info">Contact seller: <strong>@Model.Contact</strong></p>
+
+    <img src="@Model.ImageUrl" />
+
+</div>
