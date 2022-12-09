@@ -1,5 +1,5 @@
 
-# LeaveMS (Management System)
+# Ads Website Prototype
 
 
 What this project is meant to do is to present to the users a set of ads within a single website, while also providing them with a few features, such as offering the necessary information for each individual ad and letting the users save their preferred ads to a personal page called "favorite ads".
